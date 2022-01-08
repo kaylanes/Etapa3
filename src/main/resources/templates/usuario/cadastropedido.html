@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		
+	<link rel="stylesheet" href="/css/cadastro.css" />
+	
+	<!-- jQuery Autocomplete -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+	<script>
+		$(function (){
+			$("#disciplina").autocomplete({
+				source: "/pedidos/autocompleteDisciplinas", 
+				minLength: 1,
+				select: function (event, ui) {
+					this.value = ui.item.label;
+					$("#idDisciplina").val(ui.item.value);
+					return false;
+				}
+			});
+		});
+	</script>
+	<title>Cadastro de Pedido</title>
+	
+</head>
+<body>
+
+	<!-- Campos que o estudante irar preencher para solicitar -->
+	<form th:action="@{/pedidos/salvar}" th:object="${pedido}" method="post">
+		
+		<input type="hidden" th:field="${pedido.id}" />
+		 
+		 <h4 class="title">Cadastro de pedido</h4>
+		 
+		 <div th:replace="fragments/mensagem"></div>
+		 
+		 <div class="card">
+		 
+		  <div class="mb-3">
+		    <label class="form-label">Informe seu nome:</label>
+		    <input type="text" class="form-control" th:field="${pedido.nome}"  placeholder="Nome completo">
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Matrícula:</label>
+		    <input type="text" th:field="${pedido.matricula}"  placeholder="Informe sua matrícula" class="form-control" >
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Curso:</label>
+		    <input type="text" th:field="${pedido.curso}" placeholder="Informática" class="form-control" >
+		  </div>
+		  <div class="mb-3">
+		    <label class="form-label">Disciplina:</label>
+		    <input id="disciplina" type="text" th:field="${pedido.disciplina.nome}" class="form-control" />
+		    <input id="idDisciplina" type="hidden" th:field="${pedido.disciplina.id}" />
+		  </div>
+		 <div class="mb-3">
+			 <label th:field="${pedido.motivo}" class="form-label">Explique o motivo:</label>
+			 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" th:field="${pedido.motivo}"></textarea>
+		 </div>
+		  
+		  <div class="btn">
+		  	<input type="submit" class="btn button" th:value="${pedido.id} == 0 ? Cadastrar : Editar" />
+		  	<input type="submit" class="btn button" value="Cancelar" formaction="/pedidos/realizado" formmethod="get" />
+		  </div>
+		  
+		  </div>
+	</form>
+	
+</body>
+</html>

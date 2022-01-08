@@ -1,0 +1,100 @@
+body {
+	margin: 0px;;
+}
+
+
+#teste li a{
+	color: white;
+}
+
+#teste li a:hover {
+	color: white;
+	background-color: black;
+	
+}
+
+.cards {
+	width: 100vw;
+	height: 100vh;
+	margin: auto;
+	justify-content: center;
+	align-items: center;
+}
+
+table {
+	display: table-cell;
+	padding: 40px;
+	border-radius: 20px;
+    margin: 0 auto;
+    background-color: #ffffff;
+    color: #000000;
+    text-align: center;
+}
+
+td {
+	width: 150px;
+}
+
+.title {
+	display: flex;
+	justify-content: center;
+	color: white;
+}
+
+.fundo-1{
+	background: rgb(146, 201, 150);
+	margin: auto;
+	min-height: 130vh;
+}
+
+.btn-custon{
+	padding: 1px 15px 3px 2px;
+	border-radius: 50px;
+}
+.btn-icon{
+	padding: 8px;
+	
+}
+
+.button {
+	background-color: #3ca472;
+	color: white;
+	border: none;
+}
+
+.button:hover {
+	color: white;
+	background-color:  rgb(146, 201, 150);
+}
+
+hr {
+	border-top: 2.3px solid white;
+	margin: 0 auto;
+
+}
+
+.card {
+	background-color: white;
+	border-color: white;
+	color: black;
+}
+
+.container{
+	justify-content: center;
+	align-content: center;
+}
+
+#destaques .img-container{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0 auto;
+	height: 300px;
+	width: 100%;
+}
+
+.container-1{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}

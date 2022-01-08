@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<link rel="stylesheet" href="/css/cadastro.css" />
+</head>
+<body>
+
+	<!-- Tela de login -->
+	
+	<form class="formLogin" method="post" th:action="@{/login}">
+	 
+	<div class="card">
+	 	<div class="card-top">
+	 		<img class="imglogin" src="imagens/logintes.png" alt="" >
+			<h4>LOGIN</h4>
+		</div>
+		
+		<div class="card-campos">
+			<label>Matrícula:</label>
+			<input type="text" name="username" required autofocus></br>
+		</div>
+		
+		<div class="card-campos">
+			<label>Senha:</label>
+			<input type="password" name="password" required/><br/>
+		</div>
+		
+		<div class="card-campos">		
+			<a href="/usuarios/cadastro">Cadastro</a>
+		</div>
+	
+		<div class="card-campos">
+			<button type="submit">Entrar</button>
+		</div>
+	</div>
+	
+	</form>
+
+
+</body>
+</html>

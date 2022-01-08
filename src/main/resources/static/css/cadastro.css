@@ -1,0 +1,71 @@
+body {
+	display: flex;
+    background-color: rgb(146, 201, 150);
+}
+
+.card {
+	padding: 20px;
+	border-radius: 10px;
+	background-color: white;
+
+}
+
+form {
+	width: 400px;
+	margin: auto;	
+	background-color: center;
+}
+
+.card-top {
+	text-align: center;
+}
+
+.imglogin {
+	width: 90px;
+	border-radius: 45px;
+	box-shadow: 1px 1px 5px #CCC;
+}
+
+.card-campos {
+	margin-bottom: 10px;
+}
+
+.card-campos > label {
+	width: 100%;
+	color: black;
+	display: block;
+}
+
+.card-campos > input {
+	border-radius: 5px;
+	width: 100%;
+	height: 30px;
+	padding: 5px;
+}
+.title {
+	display: flex;
+	justify-content: center;
+	color: black;
+}
+
+.btn {
+	border-radius: 30px;
+	padding: 5px;
+	background-color: #3ca472;
+	color: white;
+	border: 0px;
+}
+
+.card-campos > button {
+	width: 100%;
+	border-radius: 30px;
+	padding: 10px;
+	background-color: #3ca472;
+	color: white;
+	border: 0px;
+}
+
+.button:hover {
+	color: white;
+	background-color:  rgb(146, 201, 150);
+}

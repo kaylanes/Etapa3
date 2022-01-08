@@ -1,0 +1,121 @@
+body {
+	height: 100%; 
+}
+
+.container-2 {
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.principal{
+	background: rgb(146, 201, 150);
+	background-size: cover;
+	
+}
+
+.imgg {
+	width: 15rem;
+	height: 15rem;
+}
+
+input, button {
+	outline: none !important;
+	border: none;
+}
+
+.button {
+	background-color: #3ca472;
+	color: white;
+	border: none;
+}
+
+.button:hover {
+	color: white;
+	background-color:  rgb(146, 201, 150);
+}
+
+hr {
+	border-top: 2.3px solid white;
+	margin: 0 auto;
+
+}
+
+.container-1{
+	background-attachment: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.card {
+	background: white;
+	color: black;
+	border-color: #3ca472;
+	box-shadow: 7px 7px 13px 0px rgba(50, 50, 50, 0.22);
+	border-radius: 8px;
+	justify-content: center;
+	
+}
+
+
+.container-login {
+	width: 100%;  
+	margin: 0 auto;
+	min-height: 100vh;
+	display: block;
+	padding: 40px;
+	border-radius: 20px;
+	text-align: center;
+}
+
+
+/*
+  Formulário
+*/
+
+.login-form {
+  width: 100%;
+}
+
+.login-form-title {
+  display: block;
+  font-size: 40px;
+  color: #000000;
+  line-height: 4;
+  text-align: center;
+}
+
+.a {
+	text-align: center;
+	color: #000000;
+}
+
+/*
+  Botão
+*/
+
+.container-login-form-btn {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.principal-home {	
+	display: block;
+	min-height: 100vh;
+	text-align: center;	
+	justify-content: center;
+	color: white;
+	font-size: 50px;
+	font-family: Tahoma;
+}
+
+
+
+.idealizadores {
+	display: flex;
+	margin: 0 auto;
+	min-height: 70vh;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt"
+	xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+	<!-- Required meta tags -->
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<link rel="stylesheet" href="/css/cadastro.css" />
+	
+	<title>Cadastro Administrador</title>
+</head>
+<body> 
+	
+	<!-- Campos que o administrador irar preencher -->
+	<form th:action="@{/usuarios/salvar}" th:object="${usuario}" method="post"  enctype="multipart/form-data">
+		
+		<h4 class="title">Cadastro do administrador</h4>
+		
+		<div class="card">
+		
+		<div th:replace="fragments/mensagem"></div>
+		
+		<input type="hidden" th:field="${usuario.id}" />
+		
+		<div class="mb-3">
+			<label class="form-label">Nome:</label>
+			<input type="text" class="form-control" th:field="${usuario.nome}" placeholder="Nome Completo">
+		</div>
+		
+		<div class="mb-3">
+			<label class="form-label">Matrícula:</label>
+			<input type="text" th:field="${usuario.matricula}" placeholder="Informe sua matrícula" class="form-control" >
+		</div>
+		
+		<div class="mb-3">
+			<label for="exampleInputEmail1" class="form-label">E-mail:</label>
+			<div class="input-group">
+				<div class="input-group-text">@</div>
+				<input type="email" th:field="${usuario.email}" placeholder="exemplo@gmail.com" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+			</div>
+		</div>
+	
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Senha:</label>
+			<input type="password" th:field="${usuario.senha}" placeholder="Crie uma nova senha" class="form-control" id="exampleInputPassword1">
+		</div>
+		
+		<div class="mb-3">
+			<label for="exampleInputPassword1" class="form-label">Confirmar senha:</label>
+			<input type="password" th:field="${usuario.confirmar}" placeholder="Confirme sua senha" class="form-control" id="exampleInputPassword1">
+		</div>
+		
+		<div class="mb-3">
+			<label class="form-label">Envie uma foto sua:</label>
+			<input type="file" th:name="file" class="form-control" >
+			<input type="hidden" th:field="${usuario.foto.id}" />
+		</div>
+	
+		<div class="btn">
+			<input type="submit" class="btn button" th:value="${usuario.id} == 0 ? Cadastrar : Editar" />
+			<input type="submit" class="btn button" value="Cancelar" formaction="/realizado/feito" formmethod="get" />
+		</div>
+		
+		</div>
+	</form>
+	
+</body>
+</html>
+

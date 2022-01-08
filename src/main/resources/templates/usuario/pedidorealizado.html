@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt"
+	layout:decorate="~{layout}">
+<head>
+	<!-- Required meta tags -->
+	
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1"> <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+	
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+	
+	<link rel="stylesheet" href="/css/opcoes.css" />
+	
+	<title>Pedido</title>
+</head>
+<body> 
+
+	<!-- Cards com as opçoes para cadastrar ou ver o cadastro -->
+	
+	<section layout:fragment="corpo">
+
+	<div class="fundo-1">
+	<br/>
+	
+	<div class="cards">
+		<div class="container principal">
+			<div class="card">
+				<div class="card-body">
+				<p class="card-text aling-center"> Cadastre o pedido para tracar disciplinas, procure a solicitações, edite ou exclua.</p>
+				</div>
+			</div>
+		</div>
+		
+		<div id="destaques" class="block">
+			<div class="container">
+				<div class="row">
+				<div class="col-lg-3 mb-lg-0"></div>
+					<div class="col-lg-3 col-md-6 mb-lg-0">
+						<div class="img-container mb-3">
+							<div class="card">
+								<div class="card-body text-center">
+									<h5 class="card-title">TRANCAR DISCIPLINAS</h5>
+									<p class="card-text">Realize sua solicitações para trancar as disciplinas que você deseja.</p>
+									<a href="/pedidos/cadastropedido" class="btn button">Solicitar</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+				<div class="col-lg-3 col-md-6 mb-lg-0">
+					<div class="img-container mb-3">
+						<div class="card">
+							<div class="card-body text-center">
+								<h5 class="card-title">VER SOLICITAÇÕES</h5>
+								<p class="card-text">Veja os dados qual você cadastrou, edita-las ou remove-las do sistema.</p>
+								<a href="/pedidos/buscap" class="btn button">Buscar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="col-lg-3 mb-lg-0"></div>
+				
+				</div>
+			</div>
+		</div>
+		
+	<div id="slider">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6"></div>
+			</div>
+		</div>
+	</div>
+	
+	</div>
+	</div>
+	
+	</section>
+</body>
+</html>
